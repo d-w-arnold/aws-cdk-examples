@@ -4,11 +4,13 @@ What is [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/v2/guide/hom
 
 For the existing `cdk-sih` CDK project, see:
 
-- Entrypoint `cdk-sih/app.py` file.
+- Entrypoint\* [cdk-sih/app.py](cdk-sih/app.py) file.
 
-- Source `cdk-sih/cdk_sih` directory, containing all CDK stack classes.
+- Source [cdk-sih/cdk_sih](cdk-sih/cdk_sih) directory, containing all CDK stack classes.
 
-- Factory class in `cdk-sih/cdk_sih/constructs/factory.py` file.
+- Factory class in [cdk-sih/cdk_sih/constructs/factory.py](cdk-sih/cdk_sih/constructs/factory.py) file.
+
+(*) For the CDK app starting point, search: `# ---------- CDK app ----------`
 
 ---
 

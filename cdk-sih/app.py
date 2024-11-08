@@ -485,15 +485,6 @@ for k, v in project_dependant_meta.items():
             update_deploy_env_lists(k, p, deploy_env_weekend_sets, weekend=True)
 
 
-# ---------- CDK app ----------
-
-####################################################################################################
-# --- Infrastructure ---
-####################################################################################################
-
-app = cdk.App()
-
-
 # TODO: (IMPORTANT) Incorporate usage of new function
 def get_cdk_stack_args_default(
     deploy_env: str,
@@ -528,6 +519,14 @@ def get_cdk_stack_args_default(
             args[desc_] = factory.get_cdk_stack_description(**{**stack_id_props, **{"detail": description}})
     return args
 
+
+# ---------- CDK app ----------
+
+####################################################################################################
+# --- Infrastructure ---
+####################################################################################################
+
+app = cdk.App()
 
 cdk_vpc_sih_stack = CdkVpcSihStack(
     scope=app,
