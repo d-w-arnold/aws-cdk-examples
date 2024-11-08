@@ -783,7 +783,9 @@ class CdkConstructsFactory:
 
         # AWS submodule paths
         self.sub_paths = {
-            service: self.get_path([submodule_path_relative_prefix, self.join_sep_score([self.AWS_, service])])
+            service: self.get_path(
+                [submodule_path_relative_prefix, self.join_sep_score([self.AWS_, service, "examples"])]
+            )
             for service in [self.AMPLIFY_, self.CODEPIPELINE_, self.EC2_, self.LAMBDA_, self.SES_]
         }
 
@@ -5492,8 +5494,8 @@ class CdkConstructsFactory:
     def get_buildspec_path(self, self_obj, project_name_comp: str, amplify: bool = False) -> str:
         """
         Generate a relative system file path to a buildspec.yml
-        (aws-codepipeline git submodule), or an amplify.yml
-        (aws-amplify git submodule) file.
+        (aws-codepipeline-examples git submodule), or an amplify.yml
+        (aws-amplify-examples git submodule) file.
 
         :param self_obj: The CDK stack class object.
         :param project_name_comp: The project name and component to use instead of the CDK stack class default.
