@@ -1,20 +1,20 @@
 [submodule "aws-lambda-examples"]
-    path = aws-lambda-examples
-    url = git@github.com:d-w-arnold/aws-lambda-examples.git
-    branch = main
+	path = aws-lambda-examples
+	url = git@github.com:d-w-arnold/aws-lambda-examples.git
+	branch = main
 [submodule "aws-codepipeline-examples"]
-    path = aws-codepipeline-examples
-    url = git@github.com:d-w-arnold/aws-codepipeline-examples.git
-    branch = main
+	path = aws-codepipeline-examples
+	url = git@github.com:d-w-arnold/aws-codepipeline-examples.git
+	branch = main
 [submodule "aws-ec2-examples"]
-    path = aws-ec2-examples
-    url = git@github.com:d-w-arnold/aws-ec2-examples.git
-    branch = main
+	path = aws-ec2-examples
+	url = git@github.com:d-w-arnold/aws-ec2-examples.git
+	branch = main
 [submodule "aws-amplify-examples"]
-    path = aws-amplify-examples
-    url = git@github.com:d-w-arnold/aws-amplify-examples.git
-    branch = main
+	path = aws-amplify-examples
+	url = git@github.com:d-w-arnold/aws-amplify-examples.git
+	branch = main
 [submodule "aws-ses-examples"]
-    path = aws-ses-examples
-    url = git@github.com:d-w-arnold/aws-ses-examples.git
-    branch = main
+	path = aws-ses-examples
+	url = git@github.com:d-w-arnold/aws-ses-examples.git
+	branch = main
