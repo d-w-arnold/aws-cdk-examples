@@ -1,0 +1,27 @@
+[severity]
+level = "low"
+[rules]
+    skip-rules = [
+        # HIGH
+        "AC_AWS_0057", # ✅ Ensure Certificate used in RDS instance is updated
+        "AC_AWS_0098", # ✅ Enable encryption of your EFS file systems in order to protect your data and metadata from breaches or unauthorized access and fulfill compliance requirements for data-at-rest encryption within your organization.
+        "AC_AWS_0148", # ❌ Password policies are, in part, used to enforce password complexity requirements. IAM password policies can be used to ensure password are comprised of different character sets, have minimal length, rotation and history restrictions
+        "AC_AWS_0205", # ❌ Route53HostedZone should have recordSets.
+        "AC_AWS_0214", # ❌ Enabling S3 versioning will enable easy recovery from both unintended user actions, like deletes and overwrites
+        "AC_AWS_0480", # ❌ Ensure that detailed monitoring is enabled for EC2 instances.
+        # MEDIUM
+        "AC_AWS_0053", # ❌ Ensure that your RDS database has IAM Authentication enabled.
+        "AC_AWS_0133", # ❌ Ensure that there are no exposed Amazon IAM access keys in order to protect your AWS resources against unapproved access
+        "AC_AWS_0461", # ✅ Ensure ECR repository is encrypted at rest
+        "AC_AWS_0462", # ❌ Ensure ECR repository has policy attached.
+        "AC_AWS_0479", # ✅ EC2 instances should disable IMDS or require IMDSv2 as this can be related to the weaponization phase of kill chain
+        "AC_AWS_0484", # ❌ Ensure AWS Lambda function has policy attached.
+        "AC_AWS_0492", # ❌ Ensure Target Group use HTTPs to ensure end to end encryption
+        "AC_AWS_0500", # ✅ Ensure SecretsManager Secrets are Encrypted using KMS key
+        "AC_AWS_0502", # ❌ Ensure SNS topic is Encrypted using KMS master key
+        # LOW
+        "AC_AWS_0174", # ✅ Enable AWS MQ Log Exports
+        "AC_AWS_0369", # ✅ Ensure VPC flow logging is enabled in all VPCs
+        "AC_AWS_0447", # ❌ ECR should have an image tag be immutable
+        # All AWS policies: https://github.com/tenable/terrascan/blob/master/docs/policies/aws.md
+    ]

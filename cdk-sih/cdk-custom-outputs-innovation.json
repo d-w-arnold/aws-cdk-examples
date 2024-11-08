@@ -1,0 +1,610 @@
+{
+  "CdkBastionHostLinuxStack": {
+    "Cdkvpc01siheuwest2aprivateipaddressCfnOutput": "10.0.3.103",
+    "Cdkvpc01siheuwest2bprivateipaddressCfnOutput": "10.0.4.150",
+    "Cdkvpc01siheuwest2cprivateipaddressCfnOutput": "10.0.5.50",
+    "Cdkvpc01sihprivateeuwest2aBastionHostLinuxBastionHostId48743E01": "i-0386e30e677db82f1",
+    "Cdkvpc01sihprivateeuwest2bBastionHostLinuxBastionHostId83A7ED02": "i-01e85852c284d07b1",
+    "Cdkvpc01sihprivateeuwest2cBastionHostLinuxBastionHostIdCA0F90CE": "i-0cf57e9a0bc577cec"
+  },
+  "CdkBkgBaseStack": {
+    "CdkbkgipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkbkgmailuserCfnOutput": "no-reply@bkg.sihgnpwtbf.com",
+    "CdkbkgopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkbkgproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkbkgmsalbSecurityGroupA046B566GroupIdC79AEED2": "sg-05767fad66ee383f6",
+    "ExportsOutputFnGetAttCdkbkgmsamazonmqrabbitmqbrokerSecurityGroupD63423F9GroupIdE98D36B1": "sg-046ba83a8c71cc884",
+    "ExportsOutputFnGetAttCdkbkgmsbkgmsapiRepositoryCCCD3F8EArnEC79BEBB": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/bkg-ms-api",
+    "ExportsOutputFnGetAttCdkbkgmsbkgmsbeatRepository3EA2CE0EArnEF198EF1": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/bkg-ms-beat",
+    "ExportsOutputFnGetAttCdkbkgmsbkgmsdosRepository597907F3ArnA2AEC130": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/bkg-ms-dos",
+    "ExportsOutputFnGetAttCdkbkgmsbkgmsutilRepository6906F71CArn07934ED0": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/bkg-ms-util",
+    "ExportsOutputFnGetAttCdkbkgmsecsSecurityGroup88863E2CGroupId62440BC0": "sg-028433127aa9fb8fa",
+    "ExportsOutputFnGetAttCdkbkgmselasticacheredisclusterSecurityGroup3738CB23GroupId22F68A2A": "sg-0ecc105f3109429e4",
+    "ExportsOutputRefCdkbkgmsbkgmsapiRepositoryCCCD3F8EB370359D": "foobar/bkg-ms-api",
+    "ExportsOutputRefCdkbkgmsbkgmsbeatRepository3EA2CE0E5D97C6F0": "foobar/bkg-ms-beat",
+    "ExportsOutputRefCdkbkgmsbkgmsdosRepository597907F322D79145": "foobar/bkg-ms-dos",
+    "ExportsOutputRefCdkbkgmsbkgmsutilRepository6906F71C9060A6C2": "foobar/bkg-ms-util",
+    "ExportsOutputRefCdkbkgmssecretkeysecretSecret9170C3FAE01F64DD": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BkgBase/secret-key-secret-hDGFIb",
+    "ExportsOutputRefCdkbkgmstokenkeysecretSecret5E358D12B51882EE": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BkgBase/token-key-secret-nh1mAb"
+  },
+  "CdkBkgCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkbkgmsallowipv4setCfnIPSetArnCA292BCD": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/BkgCloudFrontBase_allow-ipv4-set/fd20fa4f-89e6-4b4e-bdc0-27947e18aaf6",
+    "ExportsOutputFnGetAttCdkbkgmsblockipv4setCfnIPSetArnF5F29DF2": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/BkgCloudFrontBase_block-ipv4-set/9b0f3666-b36f-4ea2-85d4-2848692fb503",
+    "ExportsOutputFnGetAttCdkbkgmsdevicedetectorCfnRegexPatternSetArnCF8C20B8": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/BkgCloudFrontBase_device-detector/0b3d2d36-51aa-47b6-ade6-dd16dcca4175"
+  },
+  "CdkBkgMqCloudFrontProdStack": {
+    "CdkbkgmqprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/329e7c86-cece-4866-931c-408fecb1847a",
+    "CdkbkgmqprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BkgMqCloudFrontProd_cloudfront-waf/eb01d220-e90d-4a5a-912d-3d732264ac20"
+  },
+  "CdkBkgMqCloudFrontStagingStack": {
+    "CdkbkgmqstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/c4d5f8e9-4788-4dba-bb03-d3e9cf120e28",
+    "CdkbkgmqstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BkgMqCloudFrontStaging_cloudfront-waf/f18ce5ca-0d6e-4ddf-804a-89ce37b72148"
+  },
+  "CdkBkgMsCloudFrontProdStack": {
+    "CdkbkgmsprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/6f3cec42-187f-4ca0-86ec-118a8c8d8a90",
+    "CdkbkgmsprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BkgMsCloudFrontProd_cloudfront-waf/fd3f0273-a290-41eb-b0ab-31909b5e2860"
+  },
+  "CdkBkgMsCloudFrontStagingStack": {
+    "CdkbkgmsstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/e814f1d1-001e-475b-ba45-9a1750ef6c5a",
+    "CdkbkgmsstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BkgMsCloudFrontStaging_cloudfront-waf/42df321d-835e-4031-b774-e2aeba1cccad"
+  },
+  "CdkCdnAssetsCloudFrontProdStack": {
+    "CdkcdnassetsprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/3ad138e5-23f4-45fa-aa90-ee75800db103",
+    "CdkcdnassetsprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CdnAssetsCloudFrontProd_cloudfront-waf/c19780e9-b4f2-4688-bbb5-6d3723f6d099"
+  },
+  "CdkCdnAssetsCloudFrontStagingStack": {
+    "CdkcdnassetsstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/8926aefe-90ef-4f1a-857d-812cdb5d421e",
+    "CdkcdnassetsstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CdnAssetsCloudFrontStaging_cloudfront-waf/35d6a740-026d-49bd-b910-2c4f33274286"
+  },
+  "CdkCdnBaseStack": {
+    "CdkcdnipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkcdnopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkcdnproxyserverCfnOutput": "3.10.85.208"
+  },
+  "CdkCdnCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkcdnassetsallowipv4setCfnIPSetArn0EB25AF8": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/CdnCloudFrontBase_allow-ipv4-set/3f555a72-272a-4ea9-bced-92908ba0943e",
+    "ExportsOutputFnGetAttCdkcdnassetsblockipv4setCfnIPSetArn243F82B5": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/CdnCloudFrontBase_block-ipv4-set/d91b3e00-1a0d-4fc0-9647-b2a85978216b",
+    "ExportsOutputFnGetAttCdkcdnassetsdevicedetectorCfnRegexPatternSetArnBFF2981F": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/CdnCloudFrontBase_device-detector/0ec9424e-c314-4ec3-920a-462e709489b3"
+  },
+  "CdkLionBaseStack": {
+    "CdklionipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdklionopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdklionproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdklionmsalbSecurityGroupB4360310GroupIdC4DB15C5": "sg-00dfbc5004a61f41e",
+    "ExportsOutputFnGetAttCdklionmscollectorlambdaSecurityGroup2770BB41GroupIdFED5977C": "sg-0c0ea8fcd8ae3c2d3",
+    "ExportsOutputFnGetAttCdklionmsecsSecurityGroup6275FD9CGroupId7FC641DF": "sg-0636952e55d1ef5dc",
+    "ExportsOutputFnGetAttCdklionmslioncollectorRepositoryED903A8FArn03F40769": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/lion-collector",
+    "ExportsOutputFnGetAttCdklionmslionmsRepository6DB79434Arn91AFD736": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/lion-ms",
+    "ExportsOutputFnGetAttCdklionmslionprocessoravailableRepository259A64E6ArnB2B08530": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/lion-processor-available",
+    "ExportsOutputFnGetAttCdklionmslionprocessorlatestRepository87A68A25Arn305221B1": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/lion-processor-latest",
+    "ExportsOutputFnGetAttCdklionmslionprocessorprocessRepositoryF3C439CCArn59DA8AF6": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/lion-processor-process",
+    "ExportsOutputFnGetAttCdklionmselasticacheredisclusterSecurityGroupFD7260C4GroupIdE5897C57": "sg-0c59ca5cedbac79c3",
+    "ExportsOutputFnGetAttCdklionmselasticacheredisclusterextractorlambdaSecurityGroupCAFED007GroupId28D262C0": "sg-08a46ee211301716d",
+    "ExportsOutputFnGetAttCdklionmsprocessorlambdaSecurityGroupDA5C1F76GroupIdDBDFD10C": "sg-067c20df31c1b966c",
+    "ExportsOutputRefCdklionmslioncollectorRepositoryED903A8FD002D100": "foobar/lion-collector",
+    "ExportsOutputRefCdklionmslionmsRepository6DB794342C2B16B5": "foobar/lion-ms",
+    "ExportsOutputRefCdklionmslionprocessoravailableRepository259A64E6799AF6A5": "foobar/lion-processor-available",
+    "ExportsOutputRefCdklionmslionprocessorlatestRepository87A68A2583137A45": "foobar/lion-processor-latest",
+    "ExportsOutputRefCdklionmslionprocessorprocessRepositoryF3C439CC2A565E14": "foobar/lion-processor-process",
+    "ExportsOutputRefCdklionmssecretkeysecretSecretA2344800AE183F89": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:LionBase/secret-key-secret-XVVyw5"
+  },
+  "CdkLionCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdklionmsallowipv4setCfnIPSetArn41E65E3A": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/LionCloudFrontBase_allow-ipv4-set/67cf1fd0-3085-434e-8ed1-60e331204c94",
+    "ExportsOutputFnGetAttCdklionmsblockipv4setCfnIPSetArnEB68C163": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/LionCloudFrontBase_block-ipv4-set/4a3174e3-cb75-4c31-9593-9f0d76776a96",
+    "ExportsOutputFnGetAttCdklionmsdevicedetectorCfnRegexPatternSetArnD0576A31": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/LionCloudFrontBase_device-detector/6e0a187e-b2ad-4ffb-8245-b2029c99c3ab"
+  },
+  "CdkLionMsCloudFrontProdStack": {
+    "CdklionmsprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/6bfb64af-e076-454f-a8f7-8e2e10d543df",
+    "CdklionmsprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/LionMsCloudFrontProd_cloudfront-waf/28ffa124-9ce5-445b-992f-ba22b83d59f4"
+  },
+  "CdkLionMsCloudFrontStagingStack": {
+    "CdklionmsstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/77a94283-960f-41c1-ae50-10d74466affa",
+    "CdklionmsstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/LionMsCloudFrontStaging_cloudfront-waf/01ee87f5-eab0-4647-a3b6-6e9b68287481"
+  },
+  "CdkBirdBaseStack": {
+    "CdkbirdipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkbirdmailuserCfnOutput": "no-reply@bird.com",
+    "CdkbirdopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkbirdproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkbirdgwalbSecurityGroupCFF8D660GroupId2F6312C6": "sg-057a8f6cad2bd2e93",
+    "ExportsOutputFnGetAttCdkbirdgwecsSecurityGroupF7B51D55GroupId544686E6": "sg-0b0679620d5d6bae2",
+    "ExportsOutputFnGetAttCdkbirdgwelasticacheredisclusterSecurityGroup9A16B2EFGroupId1A777940": "sg-077d10296426159d4",
+    "ExportsOutputFnGetAttCdkbirdgwbirdgwRepository2CA66A59Arn981A8B61": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/bird-gw",
+    "ExportsOutputFnGetAttCdkbirdgwrdsdatabaseinstanceSecurityGroupF430CFA0GroupIdBBBDB421": "sg-091c5619ba17322b7",
+    "ExportsOutputFnGetAttCdkbirdgwrdsdatabaseinstanceinitlambdaSecurityGroupE0DB1F17GroupId70DCACC1": "sg-0af58a9c1d60deac6",
+    "ExportsOutputRefCdkbirdgwecommerceapikeysecretSecret7ADD63500BC549EC": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/e-commerce-api-key-secret-wQYAxt",
+    "ExportsOutputRefCdkbirdgwecommerceapikeysihdsecretSecret6D4DD38D25A21B90": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/e-commerce-api-key-sihd-secret-XPhwXY",
+    "ExportsOutputRefCdkbirdgwecommerceapikeysihpsecretSecret3958FF711082C8EE": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/e-commerce-api-key-sihp-secret-eAw0tw",
+    "ExportsOutputRefCdkbirdgwbirdgwRepository2CA66A594C9B7957": "foobar/bird-gw",
+    "ExportsOutputRefCdkbirdgwsecretkeysecretSecretB818D2F3E19E7E0F": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/secret-key-secret-TrV74X",
+    "ExportsOutputRefCdkbirdgwsecretkeysihdsecretSecretEA28E9DD03E79450": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/secret-key-sihd-secret-CYDpAt",
+    "ExportsOutputRefCdkbirdgwsecretkeysihpsecretSecretECD6C159A7EE9A35": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/secret-key-sihp-secret-aZUfYf",
+    "ExportsOutputRefCdkbirdgwtokenkeysecretSecretA4D2D9A77AC61E4A": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/token-key-secret-bjCkZo",
+    "ExportsOutputRefCdkbirdgwtokenkeysihdsecretSecret01FE31F572419A0D": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/token-key-sihd-secret-dqqHII",
+    "ExportsOutputRefCdkbirdgwtokenkeysihpsecretSecret49B8AC9AF35A83FB": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:BirdBase/token-key-sihp-secret-aZKhrw"
+  },
+  "CdkBirdCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkbirdgwallowipv4setCfnIPSetArnB1051438": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/BirdCloudFrontBase_allow-ipv4-set/d97ba413-4e78-480b-be54-63a986024e11",
+    "ExportsOutputFnGetAttCdkbirdgwblockipv4setCfnIPSetArn1691CE60": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/BirdCloudFrontBase_block-ipv4-set/d45732a8-6998-4f2e-8e96-2709dc09712e",
+    "ExportsOutputFnGetAttCdkbirdgwdevicedetectorCfnRegexPatternSetArn5519DFDA": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/BirdCloudFrontBase_device-detector/369810b2-b89d-4265-8760-840c7dc4e066"
+  },
+  "CdkBirdGwCloudFrontDevStack": {
+    "CdkbirdgwdevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ea177e39-5ff0-4510-ac71-de88954618d8",
+    "CdkbirdgwdevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwCloudFrontDev_cloudfront-waf/6bf3032c-de8c-436e-b550-5dc064f0d106"
+  },
+  "CdkBirdGwCloudFrontPerformStack": {
+    "CdkbirdgwperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/fc496213-c03e-4e87-9b7c-fa7084357666",
+    "CdkbirdgwperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwCloudFrontPerform_cloudfront-waf/e265467d-76aa-4e4c-985f-3f6b20567d1e"
+  },
+  "CdkBirdGwCloudFrontProdStack": {
+    "CdkbirdgwprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/6e8b8fff-353a-4330-a256-84c2505788d6",
+    "CdkbirdgwprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwCloudFrontProd_cloudfront-waf/00df59c5-bfa5-4baa-ab2a-c5b279181a4d"
+  },
+  "CdkBirdGwCloudFrontSihdStack": {
+    "CdkbirdgwsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/312bbb77-3d83-45f9-8791-521172f0907e",
+    "CdkbirdgwsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwCloudFrontSihd_cloudfront-waf/5ee4bc81-3003-4351-955e-80c731dded3c"
+  },
+  "CdkBirdGwCloudFrontSihpStack": {
+    "CdkbirdgwsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/cfffebf8-c2d6-4c9f-8e35-01179d226b34",
+    "CdkbirdgwsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwCloudFrontSihp_cloudfront-waf/b00ec7c6-3395-4bdb-8f54-bb6dbaa7cec1"
+  },
+  "CdkBirdGwCloudFrontStagingStack": {
+    "CdkbirdgwstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/40746798-9e4c-4ac6-b244-d3fafc52ed58",
+    "CdkbirdgwstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwCloudFrontStaging_cloudfront-waf/9c17d61b-e974-4bc1-9714-3e6df8e5b3f3"
+  },
+  "CdkBirdGwadCloudFrontDevStack": {
+    "CdkbirdgwaddevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/f7276e91-57e9-4572-b5eb-29f42d2e2f87",
+    "CdkbirdgwaddevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwadCloudFrontDev_cloudfront-waf/f42f3031-8086-4b74-81ca-d14cec9c9df7"
+  },
+  "CdkBirdGwadCloudFrontPerformStack": {
+    "CdkbirdgwadperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/738d1c02-7135-4bb7-a4a5-23238be805dc",
+    "CdkbirdgwadperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwadCloudFrontPerform_cloudfront-waf/2afceb25-b269-416d-82ad-19f0c0453ae2"
+  },
+  "CdkBirdGwadCloudFrontProdStack": {
+    "CdkbirdgwadprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/19e2e443-8bb4-4c89-aa83-ec938857e015",
+    "CdkbirdgwadprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwadCloudFrontProd_cloudfront-waf/ae60a99a-1fa7-46a6-ae54-7dee46dc8e0e"
+  },
+  "CdkBirdGwadCloudFrontSihdStack": {
+    "CdkbirdgwadsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/515b994f-e450-47b0-9bb2-daf90e30c539",
+    "CdkbirdgwadsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwadCloudFrontSihd_cloudfront-waf/334831ff-1c66-4883-814c-571a38c89b50"
+  },
+  "CdkBirdGwadCloudFrontSihpStack": {
+    "CdkbirdgwadsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ec5c252d-95d3-45ae-bd96-9086ad211d6a",
+    "CdkbirdgwadsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwadCloudFrontSihp_cloudfront-waf/685afdea-1c0b-4346-a3bd-cc9369b5c571"
+  },
+  "CdkBirdGwadCloudFrontStagingStack": {
+    "CdkbirdgwadstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ca347372-590e-4088-b33f-aad1feb3e4a8",
+    "CdkbirdgwadstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/BirdGwadCloudFrontStaging_cloudfront-waf/591e2d53-342b-4d72-9955-a81c5eb20c53"
+  },
+  "CdkHdsBaseStack": {
+    "CdkhdsipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkhdsopenvpnvpnserverCfnOutput": "3.10.133.253",
+    "CdkhdsproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkhdsmsalbSecurityGroup3458FBB8GroupId43B7D9B1": "sg-06acbdeb850d2ece5",
+    "ExportsOutputFnGetAttCdkhdsmsecsSecurityGroup196F3893GroupId7CE71C64": "sg-0a373922f4e98e19e",
+    "ExportsOutputFnGetAttCdkhdsmshdsmsRepository54BE0A84Arn3FF2B476": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/hds-ms",
+    "ExportsOutputRefCdkhdsmshdsmsRepository54BE0A84FFCBA10C": "foobar/hds-ms",
+    "ExportsOutputRefCdkhdsmssecretkeysecretSecret736196BEA424F6DF": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:HdsBase/secret-key-secret-zg12z4"
+  },
+  "CdkHdsCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkhdsmsallowipsetv4CfnIPSetArnBF626CD5": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/HdsCloudFrontBase_allow-ip-set-v4/5fd7988c-d73c-4d95-8844-edb1fb08cd3d",
+    "ExportsOutputFnGetAttCdkhdsmsblockipsetv4CfnIPSetArn4DE8A7BA": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/HdsCloudFrontBase_block-ip-set-v4/744def8b-6196-4182-b7f5-ac0e99c64783",
+    "ExportsOutputFnGetAttCdkhdsmsdevicedetectorCfnRegexPatternSetArn11C7B612": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/HdsCloudFrontBase_device-detector/6913008d-c5b9-49c3-8e1b-0f7208cbd41a"
+  },
+  "CdkHdsCloudFrontProdStack": {
+    "CdkhdsmsprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/2d04b4c9-7ae0-4639-bc56-d95d47b20233",
+    "CdkhdsmsprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/HdsCloudFrontProd_cloudfront-waf/5ecdbdcb-fb0f-4fd7-adda-0b595fdb2e13"
+  },
+  "CdkHdsCloudFrontStagingStack": {
+    "CdkhdsmsstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/da91be73-b497-4984-9156-97a863bfeb8e",
+    "CdkhdsmsstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/HdsCloudFrontStaging_cloudfront-waf/6d7d8f00-5af0-45b2-bbba-989256f80dc1"
+  },
+  "CdkCowBaseStack": {
+    "CdkcowipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkcowopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkcowproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkcowgwalbSecurityGroup1A27B828GroupIdB29EA2BD": "sg-07bd961caa8cf447c",
+    "ExportsOutputFnGetAttCdkcowgwecsSecurityGroup97B1ADA2GroupIdB9AA6E38": "sg-0fb1e1d3897788234",
+    "ExportsOutputFnGetAttCdkcowgwelasticacheredisclusterSecurityGroup983DF46AGroupId39CC3998": "sg-043802ea7b1111c52",
+    "ExportsOutputFnGetAttCdkcowgwcowgwRepositoryAEDCF9E8ArnB980C12F": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/cow-gw",
+    "ExportsOutputFnGetAttCdkcowgwrdsdatabaseinstanceSecurityGroupD972400EGroupId4B5E5970": "sg-0802544b40199fa3a",
+    "ExportsOutputFnGetAttCdkcowgwrdsdatabaseinstanceinitlambdaSecurityGroupBA519656GroupId5F85FB20": "sg-07f6b4f70af061e32",
+    "ExportsOutputRefCdkcowgwcowgwRepositoryAEDCF9E870EB8708": "foobar/cow-gw",
+    "ExportsOutputRefCdkcowgwtokenkeysecretSecret461B9F269420F294": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CowBase/token-key-secret-A8svnE",
+    "ExportsOutputRefCdkcowgwtokenkeysihdsecretSecret4BB2E346596E7291": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CowBase/token-key-sihd-secret-WcALZ0",
+    "ExportsOutputRefCdkcowgwtokenkeysihpsecretSecretC8AED545E0361E33": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CowBase/token-key-sihp-secret-UrbAb8"
+  },
+  "CdkCowCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkcowgwallowipv4setCfnIPSetArn36B6222E": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/CowCloudFrontBase_allow-ipv4-set/a0a72e28-2a0d-4ded-91d6-eab5774f2fd9",
+    "ExportsOutputFnGetAttCdkcowgwblockipv4setCfnIPSetArn4E43CD12": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/CowCloudFrontBase_block-ipv4-set/6431e17b-b476-46ae-acc1-7c84bb86d7dc",
+    "ExportsOutputFnGetAttCdkcowgwdevicedetectorCfnRegexPatternSetArn15AAF992": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/CowCloudFrontBase_device-detector/8b2f6cf4-6c94-4dc4-9299-0d304bc9cd08"
+  },
+  "CdkCowGwCloudFrontDevStack": {
+    "CdkcowgwdevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ea177e39-5ff0-4510-ac71-de88954618d4",
+    "CdkcowgwdevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwCloudFrontDev_cloudfront-waf/6bf3032c-de8c-436e-b550-5dc064f0d206"
+  },
+  "CdkCowGwCloudFrontPerformStack": {
+    "CdkcowgwperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/fc496213-c03e-4e87-9b7c-fa7084357662",
+    "CdkcowgwperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwCloudFrontPerform_cloudfront-waf/e265467d-76aa-4e4c-985f-3f6b20568d1e"
+  },
+  "CdkCowGwCloudFrontProdStack": {
+    "CdkcowgwprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/6e8b8fff-353a-4330-a256-84c2505788d5",
+    "CdkcowgwprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwCloudFrontProd_cloudfront-waf/00df59c5-bfa5-4baa-ab2a-c5b279181a5d"
+  },
+  "CdkCowGwCloudFrontSihdStack": {
+    "CdkcowgwsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/312bbb77-3d83-45f9-8791-521172f0906e",
+    "CdkcowgwsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwCloudFrontSihd_cloudfront-waf/5ee4bc81-3003-4351-955e-80c731dded4c"
+  },
+  "CdkCowGwCloudFrontSihpStack": {
+    "CdkcowgwsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/6f7cac46-dd06-4396-b968-9124cc420a12",
+    "CdkcowgwsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwCloudFrontSihp_cloudfront-waf/e110be89-8f64-4c40-bb27-eac76c8ac745"
+  },
+  "CdkCowGwCloudFrontStagingStack": {
+    "CdkcowgwstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/d4ea9546-ef1a-4e24-ac11-98165066f906",
+    "CdkcowgwstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwCloudFrontStaging_cloudfront-waf/4e876023-a5b2-4ae4-b366-42154c432c2e"
+  },
+  "CdkCowGwadCloudFrontDevStack": {
+    "CdkcowgwaddevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/f7276e91-57e9-4572-b5eb-29f42d2e2f86",
+    "CdkcowgwaddevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwadCloudFrontDev_cloudfront-waf/f42f3031-8086-4b74-81ca-d14cec9c9df6"
+  },
+  "CdkCowGwadCloudFrontPerformStack": {
+    "CdkcowgwadperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/738d1c02-7135-4bb7-a4a5-23238be804dc",
+    "CdkcowgwadperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwadCloudFrontPerform_cloudfront-waf/2afceb25-b269-416d-82ad-19f0c1453ae2"
+  },
+  "CdkCowGwadCloudFrontProdStack": {
+    "CdkcowgwadprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/19e2e443-8bb4-4c89-aa83-ec938858e015",
+    "CdkcowgwadprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwadCloudFrontProd_cloudfront-waf/ae60a99a-1fa7-46a6-ae54-7dee46dc7e0e"
+  },
+  "CdkCowGwadCloudFrontSihdStack": {
+    "CdkcowgwadsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/515b994f-e450-47b0-9bb2-daf90e30c549",
+    "CdkcowgwadsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwadCloudFrontSihd_cloudfront-waf/334831ff-1c66-4883-814c-571a38c88b50"
+  },
+  "CdkCowGwadCloudFrontSihpStack": {
+    "CdkcowgwadsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ec5c252d-95d3-45ae-bd96-9086ad211d7a",
+    "CdkcowgwadsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwadCloudFrontSihp_cloudfront-waf/685afdea-1c0b-4346-a3bd-cc9369b5c581"
+  },
+  "CdkCowGwadCloudFrontStagingStack": {
+    "CdkcowgwadstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ca347372-590e-4088-b33f-aad1feb3e5a8",
+    "CdkcowgwadstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CowGwadCloudFrontStaging_cloudfront-waf/591e2d53-342b-4d72-9955-a81c5eb20c52"
+  },
+  "CdkIpsecVpnBaseStack": {
+    "ExportsOutputFnGetAttCdkipsecvpnserverkmsKey4556F313Arn7243B8B6": "arn:aws:kms:eu-west-2:123456789123:key/2f794d52-2f2d-4f93-b0bd-9e6462a21259",
+    "ExportsOutputRefCdkeuwest2ipsecvpnserverec2RoleA2FDD504DCBE517A": "IpsecVpnBase_eu-west-2-ec2",
+    "ExportsOutputRefCdkipsecvpnserverec2LogGroupFBCD625CB4D8AEBF": "/aws/ec2/instance/ipsec-vpn-server"
+  },
+  "CdkMailBaseStack": {
+    "ExportsOutputFnGetAttCdkmailmsseslambdaSecurityGroupBF297039GroupId7127F93B": "sg-0a5fb6e3272cf30e3",
+    "ExportsOutputRefCdkmailmsbkgsihgnpwtbfcomdomainConfigurationSet67E6E56780B45EC3": "mail-ms-bkg-sihgnpwtbf-com-domain-config-set",
+    "ExportsOutputRefCdkmailmsbirdcomdomainConfigurationSet2439483A43088765": "mail-ms-bird-com-domain-config-set",
+    "ExportsOutputRefCdkmailmsnoreplybkgsihgnpwtbfcomEmailIdentityAE2F286F1F4ABF65": "no-reply@bkg.sihgnpwtbf.com",
+    "ExportsOutputRefCdkmailmsnoreplybirdcomEmailIdentity87BA27C40FD0C300": "no-reply@bird.com",
+    "ExportsOutputRefCdkmailmsnoreplydogcomEmailIdentity37AE3C0EBD407E93": "no-reply@dog.com",
+    "ExportsOutputRefCdkmailmsnoreplycatcomEmailIdentity9CE5433AFDD0632F": "no-reply@cat.com",
+    "ExportsOutputRefCdkmailmsnoreplyfishcomEmailIdentityFED8430DF7E069B6": "no-reply@fish.com",
+    "ExportsOutputRefCdkmailmsdogcomdomainConfigurationSet3C80405E96C47E23": "mail-ms-dog-com-domain-config-set",
+    "ExportsOutputRefCdkmailmscatcomdomainConfigurationSet3DBB23581D25BBBA": "mail-ms-cat-com-domain-config-set",
+    "ExportsOutputRefCdkmailmsfishcomdomainConfigurationSet6CC3BA1FEFE2B72A": "mail-ms-fish-com-domain-config-set"
+  },
+  "CdkOpenvpnVpnBaseStack": {
+    "ExportsOutputFnGetAttCdkopenvpnvpnserveralbSecurityGroup9E7F6CF7GroupId0F34FEB2": "sg-06f4ccf3201ac4080",
+    "ExportsOutputFnGetAttCdkopenvpnvpnserverec2SecurityGroup3CFA09A5GroupId983E4B98": "sg-0d09cc79a5b11af7c",
+    "ExportsOutputFnGetAttCdkopenvpnvpnserverkmsKey967231FCArn8584962F": "arn:aws:kms:eu-west-2:123456789123:key/2d31cc60-4199-469c-8414-bbf99725a95d"
+  },
+  "CdkOpenvpnVpnCloudFrontStack": {
+    "CdkopenvpnvpnservercloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/5cf8ec41-36be-4183-817f-0b91ea9dcd0c",
+    "CdkopenvpnvpnservercloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/OpenvpnVpnCloudFront_cloudfront-waf/af2137d7-254d-4dcb-94a4-9d09a1898a3d"
+  },
+  "CdkPdfBaseStack": {
+    "ExportsOutputFnGetAttCdkpdfmspdfmsRepository2B7E2CE1ArnCCDB1300": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/pdf-ms",
+    "ExportsOutputFnGetAttCdkpdfmss3lambdaSecurityGroupD81C4EC5GroupId772C6499": "sg-0a002740a2e917cb0",
+    "ExportsOutputRefCdkpdfmspdfmsRepository2B7E2CE141C055EF": "foobar/pdf-ms"
+  },
+  "CdkPypiBaseStack": {
+    "CdkpypiserveripsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkpypiserveropenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkpypiserverproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkpypiserveralbSecurityGroup745D0A1AGroupIdD3571C47": "sg-0ce1a13d3d6962068",
+    "ExportsOutputFnGetAttCdkpypiserverec2SecurityGroup805DFD19GroupId392438EC": "sg-0090740176347cbc1",
+    "ExportsOutputFnGetAttCdkpypiserverkmsKeyC634C1A0Arn147E141C": "arn:aws:kms:eu-west-2:123456789124:key/b0e41256-a379-4163-a3ee-944a00b68de7",
+    "ExportsOutputRefCdkeuwest2pypiserverec2RoleCB9841FB93D5DFCF": "PypiBase_eu-west-2-ec2"
+  },
+  "CdkPypiCloudFrontStack": {
+    "CdkpypiservercloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789124:certificate/3e217943-4898-45c2-809c-55388d81511d",
+    "CdkpypiservercloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789124:global/webacl/PypiCloudFront_cloudfront-waf/c9b6b898-be56-4d6f-91c6-5381d3f1fdac"
+  },
+  "CdkDogBaseStack": {
+    "CdkdogipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkdogmailuserCfnOutput": "no-reply@dog.com",
+    "CdkdogopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkdogproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkdoggwalbSecurityGroup2533A6A0GroupIdE0C4CCFF": "sg-02da2ece7a9e74b6b",
+    "ExportsOutputFnGetAttCdkdoggwecsSecurityGroup4CF82D5CGroupId51C47A3E": "sg-08599966fd67bd13a",
+    "ExportsOutputFnGetAttCdkdoggwelasticacheredisclusterSecurityGroupA0DCD1DDGroupIdC75A5B21": "sg-096deeef419426ee0",
+    "ExportsOutputFnGetAttCdkdoggwrdsdatabaseinstanceSecurityGroup0652B09FGroupIdFA73DCB9": "sg-035fe6cf5ede38026",
+    "ExportsOutputFnGetAttCdkdoggwrdsdatabaseinstanceinitlambdaSecurityGroup6FA72BECGroupId2C6A0F4C": "sg-095888c2ce6ae3ea2",
+    "ExportsOutputFnGetAttCdkdoggws3lambdaSecurityGroup4A0EC387GroupId42F9E506": "sg-0287605a96acd7e82",
+    "ExportsOutputFnGetAttCdkdoggwdogecommRepositoryC75DB00BArn05028F7B": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/dog-ecomm",
+    "ExportsOutputFnGetAttCdkdoggwdoggwRepositoryAF65AD98ArnA43E530D": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/dog-gw",
+    "ExportsOutputRefCdkdoggwecommerceapikeysecretSecretAF71405A397FBD44": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/e-commerce-api-key-secret-hQlx0p",
+    "ExportsOutputRefCdkdoggwecommerceapikeysihdsecretSecret3CAAD7397783D9AD": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/e-commerce-api-key-sihd-secret-NQv5QA",
+    "ExportsOutputRefCdkdoggwecommerceapikeysihpsecretSecret11417882AA989A55": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/e-commerce-api-key-sihp-secret-aWfWQ6",
+    "ExportsOutputRefCdkdoggwecommerceapikeyuatsecretSecretACCFFA7378766079": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/e-commerce-api-key-uat-secret-2jI2hJ",
+    "ExportsOutputRefCdkdoggwecscontainerenvfirebaseaccountinfoIStringParameterParameter831F1EEB": "{\"type\": \"service_account\", \"project_id\": \"dog-sns\", \"private_key_id\": \"e8b21716aace4c1b3e368c7030bddd9bc1f8c039\", \"private_key\": null, \"client_email\": \"firebase-adminsdk-nb4gr@dog-sns.iam.gserviceaccount.com\", \"client_id\": \"111678128006173092224\", \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\", \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nb4gr%40dog-sns.iam.gserviceaccount.com\", \"universe_domain\": \"googleapis.com\"}",
+    "ExportsOutputRefCdkdoggwsecretkeysecretSecret4423D8BB6E2306E8": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/secret-key-secret-LKH9G2",
+    "ExportsOutputRefCdkdoggwsecretkeysihdsecretSecretBB15256B5B76DC04": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/secret-key-sihd-secret-2QFqwD",
+    "ExportsOutputRefCdkdoggwsecretkeysihpsecretSecretBFD9290BECC03A7B": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/secret-key-sihp-secret-N4x2SH",
+    "ExportsOutputRefCdkdoggwsecretkeyuatsecretSecret473D1828980695F0": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogBase/secret-key-uat-secret-StSlF7",
+    "ExportsOutputRefCdkdoggwdogecommRepositoryC75DB00BE8FE7D24": "foobar/dog-ecomm",
+    "ExportsOutputRefCdkdoggwdoggwRepositoryAF65AD981C15F35C": "foobar/dog-gw"
+  },
+  "CdkDogCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkdoggwallowipv4setCfnIPSetArn101D8AD1": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/DogCloudFrontBase_allow-ipv4-set/eb436e2c-9402-4b2d-b5c7-354ff5d44825",
+    "ExportsOutputFnGetAttCdkdoggwblockipv4setCfnIPSetArnD408E046": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/DogCloudFrontBase_block-ipv4-set/08d64c9c-6219-450e-8fbd-1ed82466a230",
+    "ExportsOutputFnGetAttCdkdoggwdevicedetectorCfnRegexPatternSetArn81080904": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/DogCloudFrontBase_device-detector/9da12c6c-fd98-4b3a-aaf7-c98ffbb72fc9"
+  },
+  "CdkDogEmCloudFrontProdStack": {
+    "CdkdogemprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/f0d65a5b-1b94-4210-97d8-9a639e5bddef",
+    "CdkdogemprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogEmCloudFrontProd_cloudfront-waf/c20d723e-10c5-4831-bd79-45e5527ef034"
+  },
+  "CdkDogEmCloudFrontStagingStack": {
+    "CdkdogemstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/e1de3430-289d-4166-b86c-5f2ba8cbb3e0",
+    "CdkdogemstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogEmCloudFrontStaging_cloudfront-waf/29ef070a-c187-455e-9a3c-56c4da73bcdf"
+  },
+  "CdkDogGwCloudFrontDevStack": {
+    "CdkdoggwdevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/b56e4b48-1d14-461b-a432-722f38bb57f0",
+    "CdkdoggwdevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontDev_cloudfront-waf/3d1130d2-cd8a-4552-8df5-2f766eff5e67"
+  },
+  "CdkDogGwCloudFrontEsaStack": {
+    "CdkdoggwesacloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/bb512392-043c-4f87-9cf4-272e671cb3d3",
+    "CdkdoggwesacloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontEsa_cloudfront-waf/c257f05a-1c17-436d-9d27-0892608c6325"
+  },
+  "CdkDogGwCloudFrontOrionStack": {
+    "CdkdoggworioncloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/33e4b5ab-b435-45c8-ad20-5042e5789540",
+    "CdkdoggworioncloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontOrion_cloudfront-waf/e61fd95d-bd41-406e-8cf3-6ce7eb5e6776"
+  },
+  "CdkDogGwCloudFrontPerformStack": {
+    "CdkdoggwperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ae89ad5a-c1e8-48bb-8bb6-db0a38b9e972",
+    "CdkdoggwperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontPerform_cloudfront-waf/a8202aa1-e571-4bdd-82b4-20b1c8bc123c"
+  },
+  "CdkDogGwCloudFrontProdStack": {
+    "CdkdoggwprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/729f8949-b9bc-4965-b507-404ebd9f0308",
+    "CdkdoggwprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontProd_cloudfront-waf/ab71985a-cf66-461f-92ce-cdda43c6a20e"
+  },
+  "CdkDogGwCloudFrontSihdStack": {
+    "CdkdoggwsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/4c951c05-e727-4595-adbd-f06523a56a3d",
+    "CdkdoggwsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontSihd_cloudfront-waf/08e63397-8e25-4bd8-b695-bfaf6182a482"
+  },
+  "CdkDogGwCloudFrontSihpStack": {
+    "CdkdoggwsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/a80861c0-9518-43d0-b404-d6d8e0897ac7",
+    "CdkdoggwsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontSihp_cloudfront-waf/f91b8251-36a4-47af-81d4-d7c314678ac0"
+  },
+  "CdkDogGwCloudFrontStagingStack": {
+    "CdkdoggwstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/2a19de44-f15f-421f-a832-3895177065b9",
+    "CdkdoggwstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontStaging_cloudfront-waf/531f7999-93c0-4e78-9309-1e1d219a171d"
+  },
+  "CdkDogGwCloudFrontUatStack": {
+    "CdkdoggwuatcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/b2aaf817-1e2f-4fcb-85c8-64fc57428686",
+    "CdkdoggwuatcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontUat_cloudfront-waf/9971ca35-6647-40d1-a4f1-6addf33a34d7"
+  },
+  "CdkDogGwCloudFrontVegaStack": {
+    "CdkdoggwvegacloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/532665fa-c109-4868-97bf-bf7b8714d103",
+    "CdkdoggwvegacloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogGwCloudFrontVega_cloudfront-waf/33c0f6ad-e9ad-4ffd-9751-de017a274a99"
+  },
+  "CdkDogSpainBaseStack": {
+    "CdkdogspainipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkdogspainopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkdogspainproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkdogspaingwdogspaingwRepositoryEE463E79ArnCE1E2086": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/dog-spain-gw",
+    "ExportsOutputRefCdkdogspaingwecommerceapikeysecretSecretB67E017B34C85F33": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogSpainBase/e-commerce-api-key-secret-E3AVlN",
+    "ExportsOutputRefCdkdogspaingwsecretkeysecretSecret952D0034417C647E": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:DogSpainBase/secret-key-secret-79cRk2",
+    "ExportsOutputRefCdkdogspaingwdogspaingwRepositoryEE463E7950B746AE": "foobar/dog-spain-gw"
+  },
+  "CdkDogSpainCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkdoggwallowipsetv4CfnIPSetArnD46889FC": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/DogCloudFrontBase_allow-ip-set-v4/be654909-93f3-436c-918d-63b0427c89d2",
+    "ExportsOutputFnGetAttCdkdoggwblockipsetv4CfnIPSetArn809110D9": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/DogCloudFrontBase_block-ip-set-v4/6083330a-4fd2-4ff8-b867-de534a57fe1e",
+    "ExportsOutputFnGetAttCdkdoggwdevicedetectorCfnRegexPatternSetArn81080904": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/DogCloudFrontBase_device-detector/9da12c6c-fd98-4b3a-aaf7-c98ffbb72fc9"
+  },
+  "CdkDogSpainGwCloudFrontEsaStack": {
+    "CdkdogspaingwesacloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/8df55060-0486-4879-b0a9-59e1a86a3438",
+    "CdkdogspaingwesacloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainCloudFrontDev_cloudfront-waf/643ae110-850b-4ddb-bdd6-0124722b818f"
+  },
+  "CdkDogSpainGwCloudFrontOrionStack": {
+    "CdkdogspaingworioncloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/6ce0a766-1b5b-44ea-8389-a4ead09dd7e3",
+    "CdkdogspaingworioncloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontOrion_cloudfront-waf/1f10170f-b497-45fa-9618-56903facf972"
+  },
+  "CdkDogSpainGwCloudFrontProdStack": {
+    "CdkdogspaingwprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/934a8f81-2ea7-4adb-a9de-c2b736f8ef43",
+    "CdkdogspaingwprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontProd_cloudfront-waf/2da01a45-8632-49a9-ac77-af28c035d37c"
+  },
+  "CdkDogSpainGwCloudFrontSihdStack": {
+    "CdkdogspaingwsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/8f388567-4bb3-48d4-9c97-4ac384b28734",
+    "CdkdogspaingwsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontSihd_cloudfront-waf/7abce1f0-90fe-4be9-b9b2-e9029029472a"
+  },
+  "CdkDogSpainGwCloudFrontSihpStack": {
+    "CdkdogspaingwsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/9e003601-5b0b-43c7-b650-b49ae850d1b5",
+    "CdkdogspaingwsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontSihp_cloudfront-waf/fd82d7bf-76de-4275-9642-711d53fb9692"
+  },
+  "CdkDogSpainGwCloudFrontStagingStack": {
+    "CdkdogspaingwstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/49a4ed1b-f8e9-4af1-9b13-4dc724142143",
+    "CdkdogspaingwstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontStaging_cloudfront-waf/279f9e71-3b79-449f-97c6-0ec42e12d805"
+  },
+  "CdkDogSpainGwCloudFrontUatStack": {
+    "CdkdogspaingwuatcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/49a4ed1b-f8e9-4af1-9b13-4dc724142143",
+    "CdkdogspaingwuatcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontUat_cloudfront-waf/279f9e71-3b79-449f-97c6-0ec42e12d805"
+  },
+  "CdkDogSpainGwCloudFrontVegaStack": {
+    "CdkdogspaingwvegacloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/e5973ee9-e3fd-4c9d-913b-d671bdf81c98",
+    "CdkdogspaingwvegacloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/DogSpainGwCloudFrontVega_cloudfront-waf/6fe23fad-e445-4529-bd8e-b196d918d608"
+  },
+  "CdkCatBaseStack": {
+    "CdkcatipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkcatmailuserCfnOutput": "no-reply@cat.com",
+    "CdkcatopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkcatproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkcatgwalbSecurityGroup859F38B8GroupId48FED6F5": "sg-0414918d4b4491ef3",
+    "ExportsOutputFnGetAttCdkcatgwecsSecurityGroup805A7535GroupId8A7C76A6": "sg-05cc2e60ac6edf9cf",
+    "ExportsOutputFnGetAttCdkcatgwelasticacheredisclusterSecurityGroup9B89E47AGroupIdC8442BD8": "sg-0b5bd6f46c56d519f",
+    "ExportsOutputFnGetAttCdkcatgwrdsdatabaseinstanceSecurityGroup24D52240GroupId613C72EF": "sg-0eb058b74952d9700",
+    "ExportsOutputFnGetAttCdkcatgwrdsdatabaseinstanceinitlambdaSecurityGroupE43C68F9GroupId806DFE09": "sg-07c4f8e2614dee728",
+    "ExportsOutputFnGetAttCdkcatgwcatgwRepository4FB9D67DArn6A70A85B": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/cat-gw",
+    "ExportsOutputRefCdkcatgwecommerceapikeysecretSecretC07E842D53734751": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/e-commerce-api-key-secret-XrJSGR",
+    "ExportsOutputRefCdkcatgwecommerceapikeysihdsecretSecret30EF2E068AE8F600": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/e-commerce-api-key-sihd-secret-Y7M9gG",
+    "ExportsOutputRefCdkcatgwecommerceapikeysihpsecretSecretD44DCDF4E966FF88": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/e-commerce-api-key-sihp-secret-XFP9lp",
+    "ExportsOutputRefCdkcatgwecommerceapikeyuatsecretSecret0104C684C4D27101": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/e-commerce-api-key-uat-secret-vVVmq0",
+    "ExportsOutputRefCdkcatgwecscontainerenvfirebaseaccountinfoIStringParameterParameter0A579862": "{\"type\": \"service_account\", \"project_id\": \"cat-sns\", \"private_key_id\": \"c7e3be3f27d476250a0b21e5be9fac10afc21bce\", \"private_key\": null, \"client_email\": \"firebase-adminsdk-ue0v2@cat-sns.iam.gserviceaccount.com\", \"client_id\": \"109216134072011148994\", \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\", \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ue0v2%40cat-sns.iam.gserviceaccount.com\", \"universe_domain\": \"googleapis.com\"}",
+    "ExportsOutputRefCdkcatgwsecretkeysecretSecret69A26DF83E2ADD96": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/secret-key-secret-927WOE",
+    "ExportsOutputRefCdkcatgwsecretkeysihdsecretSecretB41BE3AC890DE18B": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/secret-key-sihd-secret-qbfCOK",
+    "ExportsOutputRefCdkcatgwsecretkeysihpsecretSecretE4BCD1C355017E61": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/secret-key-sihp-secret-dmPBFQ",
+    "ExportsOutputRefCdkcatgwsecretkeyuatsecretSecret41DF70C987100BF3": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/secret-key-uat-secret-FDJHDk",
+    "ExportsOutputRefCdkcatgwcatgwRepository4FB9D67D3ED675E2": "foobar/cat-gw",
+    "ExportsOutputRefCdkcatgwtokenkeysecretSecretFBBA7FDD64BD7344": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/token-key-secret-2suywx",
+    "ExportsOutputRefCdkcatgwtokenkeysihdsecretSecretDF7D6005A2BCFD3B": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/token-key-sihd-secret-ftdxb0",
+    "ExportsOutputRefCdkcatgwtokenkeysihpsecretSecret256303EDA74855D6": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/token-key-sihp-secret-DxcXDy",
+    "ExportsOutputRefCdkcatgwtokenkeyuatsecretSecretBB3A120F20490C78": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:CatBase/token-key-uat-secret-bmUT2f"
+  },
+  "CdkCatCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkcatgwallowipv4setCfnIPSetArn8087E068": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/CatCloudFrontBase_allow-ipv4-set/85697733-295a-4339-adb0-5e93ea11c443",
+    "ExportsOutputFnGetAttCdkcatgwblockipv4setCfnIPSetArnBE53A4EE": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/CatCloudFrontBase_block-ipv4-set/945fa8b6-ad39-4305-816f-8fcf5a537dc6",
+    "ExportsOutputFnGetAttCdkcatgwdevicedetectorCfnRegexPatternSetArn46C89A89": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/CatCloudFrontBase_device-detector/3ea9ed6c-2700-4d8f-88aa-b524a56240bc"
+  },
+  "CdkCatGwCloudFrontDevStack": {
+    "CdkcatgwdevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/c4fc2dd5-41a3-40e5-84d2-d796720097e2",
+    "CdkcatgwdevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontDev_cloudfront-waf/a57c0bd2-0cb0-42bf-9b9c-cd586f3d0422"
+  },
+  "CdkCatGwCloudFrontPerformStack": {
+    "CdkcatgwperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/494b9fe3-6bbe-4274-bad1-80c7cae0a041",
+    "CdkcatgwperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontPerform_cloudfront-waf/5b4bf52e-4170-409d-ba63-d26a14280115"
+  },
+  "CdkCatGwCloudFrontProdStack": {
+    "CdkcatgwprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/fbdae3ad-b280-47ca-a649-cf3c09b47fd1",
+    "CdkcatgwprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontProd_cloudfront-waf/2e958831-3a03-4c88-bfcb-d69368babfa2"
+  },
+  "CdkCatGwCloudFrontSihdStack": {
+    "CdkcatgwsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/2cca1b82-7fb8-4bb7-9971-32158a4868cc",
+    "CdkcatgwsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontSihd_cloudfront-waf/54903bc2-4bfd-4925-bf3a-b526a2b0e6e8"
+  },
+  "CdkCatGwCloudFrontSihpStack": {
+    "CdkcatgwsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/853614bb-b2ff-400c-b486-49401a13e543",
+    "CdkcatgwsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontSihp_cloudfront-waf/5d809465-605b-4293-ac8c-616b071f0d7e"
+  },
+  "CdkCatGwCloudFrontStagingStack": {
+    "CdkcatgwstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/36ed3ef2-bbe7-4be9-b9aa-3832b573d9ea",
+    "CdkcatgwstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontStaging_cloudfront-waf/679f59be-9245-4778-a198-c07406bcb910"
+  },
+  "CdkCatGwCloudFrontUatStack": {
+    "CdkcatgwuatcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/d2f4308b-7c00-481f-9e74-e745174a5d68",
+    "CdkcatgwuatcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwCloudFrontUat_cloudfront-waf/400fc636-7daf-41bc-b70b-f71eb2e40105"
+  },
+  "CdkCatGwadCloudFrontDevStack": {
+    "CdkcatgwaddevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/3ea1cc9e-f8eb-4ff9-877b-d24d4d935850",
+    "CdkcatgwaddevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontDev_cloudfront-waf/bd0529ea-73f8-449e-b350-e1724d252e4b"
+  },
+  "CdkCatGwadCloudFrontPerformStack": {
+    "CdkcatgwadperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/29ae4226-320d-4365-ab95-b7cabba97c14",
+    "CdkcatgwadperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontPerform_cloudfront-waf/26917ad0-1652-460a-a97c-1b23574020e9"
+  },
+  "CdkCatGwadCloudFrontProdStack": {
+    "CdkcatgwadprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/886c482e-6eea-4490-a562-c4badd7ba6f7",
+    "CdkcatgwadprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontProd_cloudfront-waf/0b52c094-2e26-4f94-b72d-9a1da7e747f1"
+  },
+  "CdkCatGwadCloudFrontSihdStack": {
+    "CdkcatgwadsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/76cb55fb-128e-401a-9331-e1b5ee129fe5",
+    "CdkcatgwadsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontSihd_cloudfront-waf/444de81d-1bfe-4148-8344-dcd60637f781"
+  },
+  "CdkCatGwadCloudFrontSihpStack": {
+    "CdkcatgwadsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/cca276d9-7739-42ce-9b73-851131cdd283",
+    "CdkcatgwadsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontSihp_cloudfront-waf/3d0bee07-7e03-4ae2-a347-c6b1dee6b5de"
+  },
+  "CdkCatGwadCloudFrontStagingStack": {
+    "CdkcatgwadstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/2bbebbf6-6116-4aca-bbfe-fea6befe06c4",
+    "CdkcatgwadstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontStaging_cloudfront-waf/418016af-8a4f-4eb3-8d72-9765c7f22943"
+  },
+  "CdkCatGwadCloudFrontUatStack": {
+    "CdkcatgwaduatcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/853614bb-b2ff-400c-b486-49401a13e543",
+    "CdkcatgwaduatcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/CatGwadCloudFrontUat_cloudfront-waf/5d809465-605b-4293-ac8c-616b071f0d7e"
+  },
+  "CdkFishBaseStack": {
+    "CdkfishipsecvpnserverCfnOutput": "3.10.133.253",
+    "CdkfishmailuserCfnOutput": "no-reply@fish.com",
+    "CdkfishopenvpnvpnserverCfnOutput": "18.168.219.78",
+    "CdkfishproxyserverCfnOutput": "3.10.85.208",
+    "ExportsOutputFnGetAttCdkfishgwalbSecurityGroupD287F0A1GroupIdCA1A7862": "sg-00da4b4dc5527bcd5",
+    "ExportsOutputFnGetAttCdkfishgwecsSecurityGroup041E727CGroupId78C0EC71": "sg-038e8a47ae751e388",
+    "ExportsOutputFnGetAttCdkfishgwelasticacheredisclusterSecurityGroup49790AEEGroupIdFB0A897D": "sg-0d423b8b2a8ec510e",
+    "ExportsOutputFnGetAttCdkfishgwrdsdatabaseinstanceSecurityGroupE4D8D8C2GroupId6DA721FA": "sg-0132f9680ec81d457",
+    "ExportsOutputFnGetAttCdkfishgwrdsdatabaseinstanceinitlambdaSecurityGroup0A8D5BBBGroupId9A770BE7": "sg-0d3180f66a6d823d5",
+    "ExportsOutputFnGetAttCdkfishgwfishgwRepository0C2C82FAArn56E2CB89": "arn:aws:ecr:eu-west-2:123456789123:repository/foobar/fish-gw",
+    "ExportsOutputRefCdkfishgwecommerceapikeysecretSecretE65237441A42DA34": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/e-commerce-api-key-secret-7S7i92",
+    "ExportsOutputRefCdkfishgwecommerceapikeysihdsecretSecret77CA218347E7CC49": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/e-commerce-api-key-sihd-secret-neeyRO",
+    "ExportsOutputRefCdkfishgwecommerceapikeysihpsecretSecret2C5F7B8CC4A0BA43": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/e-commerce-api-key-sihp-secret-mIsuKw",
+    "ExportsOutputRefCdkfishgwecscontainerenvfirebaseaccountinfoIStringParameterParameter8C743E02": "{\"type\": \"service_account\", \"project_id\": \"fish\", \"private_key_id\": \"77859af3bbbd58b2a81792babdc4379f83ec611b\", \"private_key\": null, \"client_email\": \"firebase-adminsdk-66f23@fish.iam.gserviceaccount.com\", \"client_id\": \"105705685896292470054\", \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\", \"token_uri\": \"https://oauth2.googleapis.com/token\", \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\", \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-66f23%40fish.iam.gserviceaccount.com\", \"universe_domain\": \"googleapis.com\"}",
+    "ExportsOutputRefCdkfishgwsecretkeysecretSecret85348D5CE94DC44C": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/secret-key-secret-hupTHr",
+    "ExportsOutputRefCdkfishgwsecretkeysihdsecretSecret117F64C0D8FFBDE8": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/secret-key-sihd-secret-i7QJfg",
+    "ExportsOutputRefCdkfishgwsecretkeysihpsecretSecret688042EEA057909E": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/secret-key-sihp-secret-fhqKbI",
+    "ExportsOutputRefCdkfishgwtokenkeysecretSecret6055C9B6946E2B71": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/token-key-secret-rTJGfE",
+    "ExportsOutputRefCdkfishgwtokenkeysihdsecretSecret5B477D83A5D6201E": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/token-key-sihd-secret-R4S0jf",
+    "ExportsOutputRefCdkfishgwtokenkeysihpsecretSecret1933AAE8DBF7481A": "arn:aws:secretsmanager:eu-west-2:123456789123:secret:FishBase/token-key-sihp-secret-jaVHAN",
+    "ExportsOutputRefCdkfishgwfishgwRepository0C2C82FAC8F963CB": "foobar/fish-gw"
+  },
+  "CdkFishCloudFrontBaseStack": {
+    "ExportsOutputFnGetAttCdkfishgwallowipv4setCfnIPSetArn1838ADEF": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/FishCloudFrontBase_allow-ipv4-set/af52b60a-3a89-40bb-b055-20be4b6a5151",
+    "ExportsOutputFnGetAttCdkfishgwblockipv4setCfnIPSetArn97A782B3": "arn:aws:wafv2:us-east-1:123456789123:global/ipset/FishCloudFrontBase_block-ipv4-set/dc650f93-a4e7-4d6a-9187-64a174f17f5c",
+    "ExportsOutputFnGetAttCdkfishgwdevicedetectorCfnRegexPatternSetArn2C22E7D6": "arn:aws:wafv2:us-east-1:123456789123:global/regexpatternset/FishCloudFrontBase_device-detector/0ad0da97-128e-489a-8cd8-8bd289c41aaa"
+  },
+  "CdkFishGwCloudFrontDevStack": {
+    "CdkfishgwdevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/217514ef-eead-4d65-8771-29c16f22c518",
+    "CdkfishgwdevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwCloudFrontDev_cloudfront-waf/0fd2a689-4f18-4abb-a97c-6c3ece79ba8b"
+  },
+  "CdkFishGwCloudFrontPerformStack": {
+    "CdkfishgwperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/dd067429-bad8-4db7-8715-877acfacd700",
+    "CdkfishgwperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwCloudFrontPerform_cloudfront-waf/87efa959-6f7d-47c4-8cf5-b47af75e8c67"
+  },
+  "CdkFishGwCloudFrontProdStack": {
+    "CdkfishgwprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/3f662dcd-5abf-4021-b7e4-a14e7fc7c715",
+    "CdkfishgwprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwCloudFrontProd_cloudfront-waf/9bdaaa23-99f3-411c-88a3-f743bd6740b2"
+  },
+  "CdkFishGwCloudFrontSihdStack": {
+    "CdkfishgwsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/10cbf9d9-fe31-4023-ab18-b0bd448f016b",
+    "CdkfishgwsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwCloudFrontSihd_cloudfront-waf/d8834f6b-7940-4b7f-b368-ab47e777fd8b"
+  },
+  "CdkFishGwCloudFrontSihpStack": {
+    "CdkfishgwsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/ab496fa9-df71-40f3-a405-90cbf2b12611",
+    "CdkfishgwsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwCloudFrontSihp_cloudfront-waf/fb68ac98-08ac-4231-ac9b-9da12bbaa9d0"
+  },
+  "CdkFishGwCloudFrontStagingStack": {
+    "CdkfishgwstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/7a866309-c393-4415-8ab0-32884568828f",
+    "CdkfishgwstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwCloudFrontStaging_cloudfront-waf/9bd8ac9a-d3a5-43fe-a20a-cb1938f59ff8"
+  },
+  "CdkFishGwadCloudFrontDevStack": {
+    "CdkfishgwaddevcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/78b98966-e0e1-47e3-99bd-8d8bca42d4b4",
+    "CdkfishgwaddevcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwadCloudFrontDev_cloudfront-waf/0fd2a689-4f18-4abb-a97c-6c3ece79ba8c"
+  },
+  "CdkFishGwadCloudFrontPerformStack": {
+    "CdkfishgwadperformcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/dd067429-bad8-4db7-8715-877acfacd701",
+    "CdkfishgwadperformcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwadCloudFrontPerform_cloudfront-waf/87efa959-6f7d-47c4-8cf5-b47af75e8c68"
+  },
+  "CdkFishGwadCloudFrontProdStack": {
+    "CdkfishgwadprodcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/3f662dcd-5abf-4021-b7e4-a14e7fc7c716",
+    "CdkfishgwadprodcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwadCloudFrontProd_cloudfront-waf/9bdaaa23-99f3-411c-88a3-f743bd6740b3"
+  },
+  "CdkFishGwadCloudFrontSihdStack": {
+    "CdkfishgwadsihdcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/10cbf9d9-fe31-4023-ab18-b0bd448f016c",
+    "CdkfishgwadsihdcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwadCloudFrontSihd_cloudfront-waf/d8834f6b-7940-4b7f-b368-ab47e777fd8c"
+  },
+  "CdkFishGwadCloudFrontSihpStack": {
+    "CdkfishgwadsihpcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/db386d46-2fc3-4e38-8225-08d8730d4d8b",
+    "CdkfishgwadsihpcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwadCloudFrontSihp_cloudfront-waf/fb68ac98-08ac-4231-ac9b-9da12bbaa9d1"
+  },
+  "CdkFishGwadCloudFrontStagingStack": {
+    "CdkfishgwadstagingcloudfrontcertCfnOutput": "arn:aws:acm:us-east-1:123456789123:certificate/adfa1dfd-5bd0-4c4e-8529-6bbe74e28f6c",
+    "CdkfishgwadstagingcloudfrontwafwebaclarnCfnOutput": "arn:aws:wafv2:us-east-1:123456789123:global/webacl/FishGwadCloudFrontStaging_cloudfront-waf/9bd8ac9a-d3a5-43fe-a20a-cb1938f59ff9"
+  },
+  "eu-west-2": {
+    "CdkLionEventsProdStack": {
+      "CdklionglobalprodcustomeventseventbusarnCfnOutput": "arn:aws:events:eu-west-2:123456789123:event-bus/LionEventsProd_custom-events"
+    },
+    "CdkLionEventsStagingStack": {
+      "CdklionglobalstagingcustomeventseventbusarnCfnOutput": "arn:aws:events:eu-west-2:123456789123:event-bus/LionEventsStaging_custom-events"
+    }
+  }
+}

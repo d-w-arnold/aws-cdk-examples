@@ -1,0 +1,320 @@
+{
+  "acknowledged-issue-numbers": [
+    19179,
+    21661,
+    21902,
+    27189,
+    29420
+  ],
+  "ami:account=123456789124:filters.image-type.0=machine:filters.name.0=OpenVPN Access Server Community Image-fe8020db-5343-4c43-9e65-5ed4a825c931:filters.state.0=available:region=eu-west-2": "ami-031c46bb046b90dae",
+  "ami:account=123456789124:filters.image-type.0=machine:filters.name.0=ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20240927:filters.state.0=available:region=eu-west-2": "ami-03ceeb33c1e4abcd1",
+  "ami:account=123456789123:filters.image-type.0=machine:filters.name.0=OpenVPN Access Server Community Image-fe8020db-5343-4c43-9e65-5ed4a825c931:filters.state.0=available:region=eu-west-2": "ami-031c46bb046b90dae",
+  "ami:account=123456789123:filters.image-type.0=machine:filters.name.0=ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20240927:filters.state.0=available:region=eu-west-2": "ami-03ceeb33c1e4abcd1",
+  "availability-zones:account=123456789124:region=eu-west-2": [
+    "eu-west-2a",
+    "eu-west-2b",
+    "eu-west-2c"
+  ],
+  "availability-zones:account=123456789124:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "availability-zones:account=123456789123:region=eu-central-1": [
+    "eu-central-1a",
+    "eu-central-1b",
+    "eu-central-1c"
+  ],
+  "availability-zones:account=123456789123:region=eu-west-2": [
+    "eu-west-2a",
+    "eu-west-2b",
+    "eu-west-2c"
+  ],
+  "availability-zones:account=123456789123:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "hosted-zone:account=123456789123:domainName=bird.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z0167279357T479CKZLLV",
+    "Name": "bird.com."
+  },
+  "hosted-zone:account=123456789123:domainName=bird.com:region=us-east-1": {
+    "Id": "/hostedzone/Z0167279357T479CKZLLV",
+    "Name": "bird.com."
+  },
+  "hosted-zone:account=123456789123:domainName=bird.co.uk:region=eu-west-2": {
+    "Id": "/hostedzone/Z074440538P893XQKY2R2",
+    "Name": "bird.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=bird.co.uk:region=us-east-1": {
+    "Id": "/hostedzone/Z074440538P893XQKY2R2",
+    "Name": "bird.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=cow.it:region=eu-west-2": {
+    "Id": "/hostedzone/Z0898429Z11BKDF9BCMK",
+    "Name": "cow.it."
+  },
+  "hosted-zone:account=123456789123:domainName=cow.it:region=us-east-1": {
+    "Id": "/hostedzone/Z0898429Z11BKDF9BCMK",
+    "Name": "cow.it."
+  },
+  "hosted-zone:account=123456789124:domainName=sihdyefqna.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z07916933K5LWXKLX0ZXN",
+    "Name": "sihdyefqna.com."
+  },
+  "hosted-zone:account=123456789124:domainName=sihdyefqna.com:region=us-east-1": {
+    "Id": "/hostedzone/Z07916933K5LWXKLX0ZXN",
+    "Name": "sihdyefqna.com."
+  },
+  "hosted-zone:account=123456789123:domainName=sihgnpwtbf.com:region=eu-central-1": {
+    "Id": "/hostedzone/Z1037549DNUK0EJK6TB4",
+    "Name": "sihgnpwtbf.com."
+  },
+  "hosted-zone:account=123456789123:domainName=sihgnpwtbf.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z1037549DNUK0EJK6TB4",
+    "Name": "sihgnpwtbf.com."
+  },
+  "hosted-zone:account=123456789123:domainName=sihgnpwtbf.com:region=us-east-1": {
+    "Id": "/hostedzone/Z1037549DNUK0EJK6TB4",
+    "Name": "sihgnpwtbf.com."
+  },
+  "hosted-zone:account=123456789123:domainName=dog.co.uk:region=eu-central-1": {
+    "Id": "/hostedzone/Z06183332B2ZENEGYEZSL",
+    "Name": "dog.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=dog.co.uk:region=eu-west-2": {
+    "Id": "/hostedzone/Z06183332B2ZENEGYEZSL",
+    "Name": "dog.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=dog.co.uk:region=us-east-1": {
+    "Id": "/hostedzone/Z06183332B2ZENEGYEZSL",
+    "Name": "dog.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=dog.com:region=eu-central-1": {
+    "Id": "/hostedzone/Z03747816Z92L2EE0SAD",
+    "Name": "dog.com."
+  },
+  "hosted-zone:account=123456789123:domainName=dog.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z03747816Z92L2EE0SAD",
+    "Name": "dog.com."
+  },
+  "hosted-zone:account=123456789123:domainName=dog.com:region=us-east-1": {
+    "Id": "/hostedzone/Z03747816Z92L2EE0SAD",
+    "Name": "dog.com."
+  },
+  "hosted-zone:account=123456789123:domainName=cat.co.uk:region=eu-central-1": {
+    "Id": "/hostedzone/Z05669223BI9FNJXVGAFF",
+    "Name": "cat.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=cat.co.uk:region=eu-west-2": {
+    "Id": "/hostedzone/Z05669223BI9FNJXVGAFF",
+    "Name": "cat.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=cat.co.uk:region=us-east-1": {
+    "Id": "/hostedzone/Z05669223BI9FNJXVGAFF",
+    "Name": "cat.co.uk."
+  },
+  "hosted-zone:account=123456789123:domainName=cat.com:region=eu-central-1": {
+    "Id": "/hostedzone/Z04618511J8XTOP034QPB",
+    "Name": "cat.com."
+  },
+  "hosted-zone:account=123456789123:domainName=cat.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z04618511J8XTOP034QPB",
+    "Name": "cat.com."
+  },
+  "hosted-zone:account=123456789123:domainName=cat.com:region=us-east-1": {
+    "Id": "/hostedzone/Z04618511J8XTOP034QPB",
+    "Name": "cat.com."
+  },
+  "hosted-zone:account=123456789123:domainName=fish.com:region=eu-central-1": {
+    "Id": "/hostedzone/Z00993001BO211LW9NM4J",
+    "Name": "fish.com."
+  },
+  "hosted-zone:account=123456789123:domainName=fish.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z00993001BO211LW9NM4J",
+    "Name": "fish.com."
+  },
+  "hosted-zone:account=123456789123:domainName=fish.com:region=us-east-1": {
+    "Id": "/hostedzone/Z00993001BO211LW9NM4J",
+    "Name": "fish.com."
+  },
+  "ssm:account=123456789124:parameterName=/CdkVpcSihStack/ngw-public-ips:region=us-east-1": "35.177.118.2",
+  "ssm:account=123456789123:parameterName=/CdkVpcSihStack/ngw-public-ips:region=us-east-1": "18.130.193.28",
+  "ssm:account=123456789123:parameterName=/bkg-ms-prod-mq-rabbitmq-broker/PrivateIpAddress/eu-west-2a:region=eu-west-2": "10.0.3.97",
+  "ssm:account=123456789123:parameterName=/bkg-ms-prod-mq-rabbitmq-broker/PrivateIpAddress/eu-west-2b:region=eu-west-2": "10.0.4.210",
+  "ssm:account=123456789123:parameterName=/bkg-ms-prod-mq-rabbitmq-broker/PrivateIpAddress/eu-west-2c:region=eu-west-2": "10.0.5.44",
+  "ssm:account=123456789123:parameterName=/bkg-ms-staging-mq-rabbitmq-broker/PrivateIpAddress/eu-west-2a:region=eu-west-2": "10.0.3.180",
+  "ssm:account=123456789123:parameterName=/bkg-ms-staging-mq-rabbitmq-broker/PrivateIpAddress/eu-west-2b:region=eu-west-2": "10.0.4.29",
+  "ssm:account=123456789123:parameterName=/bkg-ms-staging-mq-rabbitmq-broker/PrivateIpAddress/eu-west-2c:region=eu-west-2": "10.0.5.26",
+  "vpc-provider:account=123456789124:filter.isDefault=true:region=eu-west-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0b4dc65392cbe7c50",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "123456789124",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0245dd8a7885dc695",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "eu-west-2a",
+            "routeTableId": "rtb-0fb8bd23274a58384"
+          },
+          {
+            "subnetId": "subnet-0fdad3cd77a6d7078",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "eu-west-2b",
+            "routeTableId": "rtb-0fb8bd23274a58384"
+          },
+          {
+            "subnetId": "subnet-07c9b68327e3d868d",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "eu-west-2c",
+            "routeTableId": "rtb-0fb8bd23274a58384"
+          }
+        ]
+      }
+    ]
+  },
+  "vpc-provider:account=123456789124:filter.isDefault=true:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0382202356150d302",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "123456789124",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0b6f25950b5d39bd8",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-0d87ac35b68af3be4"
+          },
+          {
+            "subnetId": "subnet-0408355563af5abac",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-0d87ac35b68af3be4"
+          },
+          {
+            "subnetId": "subnet-01db40a0bda001816",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-0d87ac35b68af3be4"
+          },
+          {
+            "subnetId": "subnet-0093e20301022a9e5",
+            "cidr": "172.31.80.0/20",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-0d87ac35b68af3be4"
+          },
+          {
+            "subnetId": "subnet-0ff2037e759df9f2a",
+            "cidr": "172.31.48.0/20",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-0d87ac35b68af3be4"
+          },
+          {
+            "subnetId": "subnet-0f0bae8adcffc11a0",
+            "cidr": "172.31.64.0/20",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-0d87ac35b68af3be4"
+          }
+        ]
+      }
+    ]
+  },
+  "vpc-provider:account=123456789123:filter.isDefault=true:region=eu-west-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-bae2d5d2",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "123456789123",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-4995d033",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "eu-west-2a",
+            "routeTableId": "rtb-1142a27a"
+          },
+          {
+            "subnetId": "subnet-c88a0184",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "eu-west-2b",
+            "routeTableId": "rtb-1142a27a"
+          },
+          {
+            "subnetId": "subnet-7898a111",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "eu-west-2c",
+            "routeTableId": "rtb-1142a27a"
+          }
+        ]
+      }
+    ]
+  },
+  "vpc-provider:account=123456789123:filter.isDefault=true:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-6384f91e",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "123456789123",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-7bcf3f37",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-946b93e5"
+          },
+          {
+            "subnetId": "subnet-6e476a31",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-946b93e5"
+          },
+          {
+            "subnetId": "subnet-d82606be",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-946b93e5"
+          },
+          {
+            "subnetId": "subnet-20a08f01",
+            "cidr": "172.31.80.0/20",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-946b93e5"
+          },
+          {
+            "subnetId": "subnet-c2c5b0f3",
+            "cidr": "172.31.48.0/20",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-946b93e5"
+          },
+          {
+            "subnetId": "subnet-12574d1c",
+            "cidr": "172.31.64.0/20",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-946b93e5"
+          }
+        ]
+      }
+    ]
+  }
+}
