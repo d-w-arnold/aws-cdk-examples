@@ -8,7 +8,7 @@ For the existing `cdk-sih` CDK project, see:
 
 - Source [cdk-sih/cdk_sih](cdk-sih/cdk_sih) directory, containing all CDK stack classes.
 
-- Factory class in [cdk-sih/cdk_sih/constructs/factory.py](cdk-sih/cdk_sih/constructs/factory.py) file.
+- CDK constructs factory class [cdk-sih/cdk_sih/constructs/factory.py](cdk-sih/cdk_sih/constructs/factory.py) file.
 
 (*) For the CDK app starting point, search: `# ---------- CDK app ----------`
 
