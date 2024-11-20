@@ -12,6 +12,8 @@ For the existing `cdk-sih` CDK project, see:
 
 (*) For the CDK app starting point, search: `# ---------- CDK app ----------`
 
+This repo is supported by another repo: [aws-scripts-examples](https://github.com/d-w-arnold/aws-scripts-examples)
+
 ---
 
 ### Create a new CDK Project
