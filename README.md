@@ -16,6 +16,18 @@ This repo is supported by another repo: [aws-scripts-examples](https://github.co
 
 ---
 
+### Examples of Infrastruture
+
+[IPsec VPN Server](https://github.com/d-w-arnold/aws-cdk-examples/tree/main/cdk-sih/cdk_sih/ipsec_vpn)
+
+[OpenVPN VPN Server](https://github.com/d-w-arnold/aws-cdk-examples/tree/main/cdk-sih/cdk_sih/internal_domain/openvpn_vpn)
+
+[Proxy Server](https://github.com/d-w-arnold/aws-cdk-examples/tree/main/cdk-sih/cdk_sih/proxy)
+
+[PyPi Server](https://github.com/d-w-arnold/aws-cdk-examples/tree/main/cdk-sih/cdk_sih/internal_domain/pypi)
+
+---
+
 ### Create a new CDK Project
 
 Use the convenient `cdk-init.sh` shell script:
